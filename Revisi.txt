@@ -1,0 +1,15 @@
+SELECT * FROM (((((tbl_lowongankerja as l INNER JOIN tbl_perusahaan as p ON l.idperusahaan = p.idperusahaan) INNER JOIN tbl_pekerjaan as pek ON l.idpekerjaan=pek.idpekerjaan) INNER JOIN tbl_kota as k ON p.idkota = k.idkota)INNER JOIN tbl_jenisperusahaan as j ON p.idjenis = j.idjenis) INNER JOIN tbl_kategori as kat ON pek.idkategori =kat.idkategori) INNER JOIN tbl_jabatan as jab ON pek.idjabatan =jab.idjabatan WHERE l.idpekerjaan = ". $idpekerjaan ." OR p.idkota = ". $idkota." OR l.gaji <= ". $gaji." ORDER BY l.tglterbit DESC
+
+eror 1: upload file
+pengajuan berkas belum disortir
+// validasi-validasi
+// ilangin export pdf dan exel di member
+// ilangin --pilih-- di manipulasi data perusahaan (aktif/ tidak aktif)
+// username harus unik (Validasi terlebih dahulu dengan yang di database sebelum proses insert)
+// id di ubah member di disable
+// hapus semua di admin diilangin 
+// tambah provinsi eror
+// tambah kota eror
+// user + admin harus bisa update profil diri
+// input gaji harus pake angka semua, huruf gak boleh keinput
+// ilangin sub menu yang gak bisa di klik
